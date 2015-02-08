@@ -1,0 +1,20 @@
+#vfm { float: left; margin: 10px; }
+#vfm .rating-label {  color: #FFF; font-variant: small-caps; font-family: "proxima-nova", sans-serif; text-decoration: none; float: left; padding-right: 5px;  }
+#vfm .star { background: url('../images/star-empty-icon.png') top left no-repeat; width: 15px; height: 15px; float: left; display: block; margin: 0 2px; }
+#vfm .star.hover { background: url('../images/star-icon.png') left top no-repeat; }
+
+#ras { float: left; margin: 10px; }
+#ras .rating-label {  color: #FFF; font-variant: small-caps; font-family: "proxima-nova", sans-serif; text-decoration: none; float: left; padding-right: 5px;  }
+#ras .star { background: url('../images/star-empty-icon.png') top left no-repeat; width: 15px; height: 15px; float: left; display: block; margin: 0 2px; }
+#ras .star.hover { background: url('../images/star-icon.png') left top no-repeat; }
+
+#yrp { float: left; margin: 10px; }
+#yrp .rating-label {  color: #FFF; font-variant: small-caps; font-family: "proxima-nova", sans-serif; text-decoration: none; float: left; padding-right: 5px;  }
+#yrp .star { background: url('../images/star-empty-icon.png') top left no-repeat; width: 15px; height: 15px; float: left; display: block; margin: 0 2px; }
+#yrp .star.hover { background: url('../images/star-icon.png') left top no-repeat; }
+
+
+.autocomplete-suggestions { border: 1px solid #999; background: #FFF; overflow: auto; }
+.autocomplete-suggestion { padding: 5px 5px; white-space: nowrap; overflow: hidden; font-size:22px}
+.autocomplete-selected { background: #F0F0F0; }
+.autocomplete-suggestions strong { font-weight: bold; color: #3399FF; }
