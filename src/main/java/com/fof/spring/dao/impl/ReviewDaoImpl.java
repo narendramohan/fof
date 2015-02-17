@@ -1,6 +1,9 @@
 package com.fof.spring.dao.impl;
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Set;
+import java.util.TreeSet;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
@@ -86,6 +89,19 @@ public class ReviewDaoImpl implements ReviewDao {
 		Criteria query = session.createCriteria(Review.class);
 		query.add(Restrictions.ge("reviewsByperson", friendName));//("title", rating, MatchMode.ANYWHERE));
 		List<Review> list = (List<Review>) query.list();
+		return list;
+	}
+
+	@Override
+	public Set<String> getAllUsersReviewed(int productid) {
+		Session session = entityManager.unwrap(Session.class);
+		Criteria query = session.createCriteria(Review.class);
+		query.add(Restrictions.ilike("productid", productid));
+		List<Review> reviews = (List<Review>) query.list();
+		Set<String> list = new TreeSet<String>();
+		for(Review r:reviews){
+			list.add(r.getReviewsByperson());
+		}
 		return list;
 	}
 

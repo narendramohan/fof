@@ -30,6 +30,17 @@ public class Product implements Serializable {
 	String manufacturer;
 	@Column(name="type")
 	String type;
+	
+	
+	@Column(name="originalprice")
+	String originalprice;
+	@Column(name="sellingprice")
+	String sellingprice;
+	@Column(name="guarantee")
+	String guarantee;
+	@Column(name="imageURL")
+	String imageURL;
+	
 	public int getProductid() {
 		return productid;
 	}
@@ -59,6 +70,30 @@ public class Product implements Serializable {
 	}
 	public void setType(String type) {
 		this.type = type;
+	}
+	public String getOriginalprice() {
+		return originalprice;
+	}
+	public void setOriginalprice(String originalprice) {
+		this.originalprice = originalprice;
+	}
+	public String getSellingprice() {
+		return sellingprice;
+	}
+	public void setSellingprice(String sellingprice) {
+		this.sellingprice = sellingprice;
+	}
+	public String getGuarantee() {
+		return guarantee;
+	}
+	public void setGuarantee(String guarantee) {
+		this.guarantee = guarantee;
+	}
+	public String getImageURL() {
+		return imageURL;
+	}
+	public void setImageURL(String imageURL) {
+		this.imageURL = imageURL;
 	}
 
 	

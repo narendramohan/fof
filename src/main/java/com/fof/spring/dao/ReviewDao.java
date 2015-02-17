@@ -1,6 +1,7 @@
 package com.fof.spring.dao;
 
 import java.util.List;
+import java.util.Set;
 
 import com.fof.spring.model.Review;
 
@@ -14,4 +15,5 @@ public interface ReviewDao {
 	public List<Review> getReviewByTitle(String title);
 	public List<Review> getReviewByOverAllRating(int rating);
 	public List<Review> getReviewByFriend(String friendName);
+	public Set<String> getAllUsersReviewed(int productid);
 }

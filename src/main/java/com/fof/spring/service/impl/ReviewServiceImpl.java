@@ -1,6 +1,7 @@
 package com.fof.spring.service.impl;
 
 import java.util.List;
+import java.util.Set;
 
 import javax.annotation.Resource;
 
@@ -50,6 +51,11 @@ public class ReviewServiceImpl implements ReviewService {
 	public List<Review> getReviewByOverAllRating(int rating) {
 		
 		return reviewDao.getReviewByOverAllRating(rating);
+	}
+
+	@Override
+	public Set<String> getAllUsersReviewed(int productid) {
+		return reviewDao.getAllUsersReviewed(productid);
 	}
 
 }

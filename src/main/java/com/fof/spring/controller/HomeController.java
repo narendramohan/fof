@@ -60,9 +60,20 @@ public class HomeController {
 		model.addAttribute("controllerMessage", "Welcome to fof review page!");
 		User user1 = (User)session.getAttribute("user");
 		if(user1==null)
-			return "login-page";
+			return "redirect:login-user";
 		return "home";
 	}	
+	
+	@RequestMapping(value = "/details", method = {RequestMethod.GET, RequestMethod.POST})
+	public String getDetails(Model model, HttpSession session, LoginForm loginForm) {
+		logger.info("Welcome to job search page!");
+		model.addAttribute("controllerMessage", "Welcome to fof review page!");
+		User user1 = (User)session.getAttribute("user");
+		if(user1==null)
+			return "redirect:login-user";
+		return "details";
+	}
+	
 	@RequestMapping(value = "/login-user")
 	public String loginUser(@RequestParam(value="error", required=false) boolean error, ModelMap model, LoginForm loginForm,
 			BindingResult model1, HttpServletRequest request, HttpSession session) {
@@ -73,7 +84,7 @@ public class HomeController {
 
 		User user1 = (User)session.getAttribute("user");
 		if(user1!=null)
-			return "home";
+			return "redirect:home";
 		if(submit!=null) {
 		LoginValidator validator = new LoginValidator();
 		validator.validate(loginForm, model1);
@@ -100,7 +111,7 @@ public class HomeController {
 					logger.debug(user.toString());
 					
 				}
-				return "home";
+				return "redirect:home";
 			} else if(user != null && user.getStatus()==1){
 				model.addAttribute("error", "You have been blocked due to unauthorized activity. please contact administrator.");
 			} else {

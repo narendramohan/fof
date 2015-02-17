@@ -117,6 +117,18 @@ $(document).ready(function() {
                   <input path="type" id="product.type" name="product.type" class="text" />
                 </li>
                 <li>
+                  <label for="Manu">Type</label>
+                  <input path="type" id="product.type" name="product.type" class="text" />
+                </li>
+                                <li>
+                  <label for="Manu">Type</label>
+                  <input path="type" id="product.type" name="product.type" class="text" />
+                </li>
+                                <li>
+                  <label for="Manu">Type</label>
+                  <input path="type" id="product.type" name="product.type" class="text" />
+                </li>
+                <li>
                   <input type="image" name="imageField" id="imageField" src="resources/images/submit.gif" class="send" />
                   <div class="clr"></div>
                 </li>
